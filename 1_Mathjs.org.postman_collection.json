@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "9b30a1e3-7dab-4624-8914-a4cfe02eaeef",
+		"name": "Mathjs.org",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Getmath",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://api.mathjs.org/v4/?expr=2%2F3",
+					"protocol": "http",
+					"host": [
+						"api",
+						"mathjs",
+						"org"
+					],
+					"path": [
+						"v4",
+						""
+					],
+					"query": [
+						{
+							"key": "expr",
+							"value": "2%2F3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post math",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"expr\": [\r\n      \"a = 1.2 * (2 + 4.5)\",\r\n      \"a / 2\",\r\n      \"5.08 cm in inch\",\r\n      \"sin(45 deg) ^ 2\",\r\n      \"9 / 3 + 2i\"\r\n    ],\r\n    \"precision\": 1\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://api.mathjs.org/v4/",
+					"protocol": "http",
+					"host": [
+						"api",
+						"mathjs",
+						"org"
+					],
+					"path": [
+						"v4",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
